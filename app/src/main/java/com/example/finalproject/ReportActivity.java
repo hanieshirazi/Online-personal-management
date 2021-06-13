@@ -7,49 +7,47 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class IncomeActivity extends AppCompatActivity {
+public class ReportActivity extends AppCompatActivity {
     Button co,inc,hom,bud,login,exit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_income);
-
-        co = findViewById(R.id.COst3);
-        inc = findViewById(R.id.INcome3);
-        bud = findViewById(R.id.BUdget3);
-        hom = findViewById(R.id.REport3);
-        login = findViewById(R.id.login2);
-        exit = findViewById(R.id.exit2);
-
+        setContentView(R.layout.activity_report);
+        co = findViewById(R.id.COst);
+        inc = findViewById(R.id.INcome);
+        bud = findViewById(R.id.BUdget);
+        hom = findViewById(R.id.REport);
+        login = findViewById(R.id.login4);
+        exit = findViewById(R.id.exit4);
         co.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(IncomeActivity.this, CostActivity.class));
+                startActivity(new Intent(ReportActivity.this, CostActivity.class));
             }
         });
         inc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(IncomeActivity.this, IncomeActivity.class));
+                startActivity(new Intent(ReportActivity.this, IncomeActivity.class));
             }
         });
         bud.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(IncomeActivity.this, BudgetActivity.class));
+                startActivity(new Intent(ReportActivity.this, BudgetActivity.class));
             }
         });
         hom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(IncomeActivity.this,HomePageActivity.class));
+                startActivity(new Intent(ReportActivity.this,HomePageActivity.class));
             }
         });
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(IncomeActivity.this, LoginActivity.class));
+                startActivity(new Intent(ReportActivity.this, LoginActivity.class));
             }
         });
         exit.setOnClickListener(new View.OnClickListener() {
@@ -62,6 +60,5 @@ public class IncomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
     }
 }

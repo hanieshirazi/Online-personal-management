@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".IncomeActivity">
+    tools:context=".ReportActivity">
     <LinearLayout
-        android:id="@+id/incomepage"
+        android:id="@+id/reportpage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/background"
@@ -17,14 +17,13 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:id="@+id/linear3"
+            android:id="@+id/linear5"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="#009688"
             android:orientation="horizontal">
-
             <Button
-                android:id="@+id/exit2"
+                android:id="@+id/exit4"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
                 android:layout_marginLeft="10dp"
@@ -32,106 +31,47 @@
                 android:background="@drawable/door"
                 app:backgroundTint="#FFFFFF" />
             <Button
-                android:id="@+id/login2"
+                android:id="@+id/login4"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:layout_marginLeft="320dp"
                 android:layout_marginTop="15dp"
+                android:layout_marginLeft="320dp"
                 android:background="@drawable/login"
                 app:backgroundTint="#FFFFFF" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/Income"
-            android:layout_width="363dp"
-            android:layout_height="354dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="30dp"
-            android:background="@color/white"
-            android:orientation="vertical">
-
-            <com.rengwuxian.materialedittext.MaterialEditText
-                android:layout_width="325dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:hint="  مــبلــغ : "
-                app:met_baseColor="#000000"
-                app:met_helperText="Integer"
-                app:met_iconRight="@drawable/coin"
-                app:met_maxCharacters="255"
-                app:met_minCharacters="1"
-                app:met_primaryColor="#009688" />
-
-            <com.rengwuxian.materialedittext.MaterialEditText
-                android:layout_width="325dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:hint="  دســته بنـدی : "
-                app:met_baseColor="#000000"
-                app:met_iconRight="@drawable/partition"
-                app:met_maxCharacters="255"
-                app:met_minCharacters="1"
-                app:met_primaryColor="#009688" />
-
-            <com.rengwuxian.materialedittext.MaterialEditText
-                android:layout_width="325dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:hint="  تــاریخ تراکنــش : "
-                app:met_baseColor="#000000"
-                app:met_iconRight="@drawable/calendar"
-                app:met_maxCharacters="255"
-                app:met_minCharacters="1"
-                app:met_primaryColor="#009688" />
-
-            <com.rengwuxian.materialedittext.MaterialEditText
-                android:layout_width="325dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:hint="  توضــیحات : "
-                android:layout_marginTop="20dp"
-                app:met_baseColor="#000000"
-                app:met_iconRight="@drawable/description"
-                app:met_maxCharacters="255"
-                app:met_minCharacters="1"
-                app:met_primaryColor="#009688" />
 
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/recordIncome"
-            android:layout_width="199dp"
-            android:layout_height="59dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="110dp"
-            android:text="ثبـت درآمـد"
-            android:textColor="#FFFFFF"
-            android:textSize="25dp"
-            app:backgroundTint="#009688" />
+
         <LinearLayout
-            android:id="@+id/button3"
+            android:layout_width="383dp"
+            android:layout_height="494dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@color/white">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/button4"
             android:layout_width="match_parent"
             android:layout_height="62dp"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="60dp"
             android:background="#009688"
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/COst3"
+                android:id="@+id/COst4"
                 android:layout_width="40dp"
-                android:layout_height="50dp"
+                android:layout_height="40dp"
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/cost"
                 app:backgroundTint="@color/white" />
 
             <Button
-                android:id="@+id/INcome3"
+                android:id="@+id/INcome4"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginLeft="55dp"
@@ -140,7 +80,7 @@
                 app:backgroundTint="#FFFFFF" />
 
             <Button
-                android:id="@+id/BUdget3"
+                android:id="@+id/BUdget4"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="20dp"
@@ -149,7 +89,7 @@
                 app:backgroundTint="#FFFFFF" />
 
             <Button
-                android:id="@+id/REport3"
+                android:id="@+id/REport4"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginLeft="50dp"
@@ -159,7 +99,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/text3"
+            android:id="@+id/text4"
             android:layout_width="match_parent"
             android:layout_height="39dp"
             android:layout_gravity="center"
@@ -167,7 +107,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView13"
+                android:id="@+id/textView17"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="37dp"
@@ -177,7 +117,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView14"
+                android:id="@+id/textView18"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="42dp"
@@ -187,7 +127,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView15"
+                android:id="@+id/textView19"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="39dp"
@@ -197,7 +137,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView16"
+                android:id="@+id/textView20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="35dp"
@@ -207,4 +147,5 @@
                 android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

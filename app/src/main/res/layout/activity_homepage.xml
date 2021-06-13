@@ -7,23 +7,153 @@
     tools:context=".HomePageActivity">
 
     <LinearLayout
-        android:id="@+id/bottom"
+        android:id="@+id/homepage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:background="@drawable/background"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent">
 
-        <me.ibrahimsn.lib.SmoothBottomBar
-            android:id="@+id/bottomBar"
+
+<LinearLayout
+    android:id="@+id/linear1"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="#009688"
+    android:orientation="horizontal">
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/door"
+        app:backgroundTint="#FFFFFF" />
+    <Button
+        android:id="@+id/login"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="320dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/login"
+        app:backgroundTint="#FFFFFF" />
+
+
+</LinearLayout>
+
+        <LinearLayout
+            android:layout_width="383dp"
+            android:layout_height="409dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@color/white" />
+        <Button
+            android:id="@+id/reportt"
+            android:layout_width="201dp"
+            android:layout_height="59dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:text="گزارش پیشرفته"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp"
+            app:backgroundTint="#009688" />
+        <LinearLayout
+            android:id="@+id/button"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            app:backgroundColor="@color/teal_700"
-            app:menu="@menu/menu" />
+            android:layout_height="62dp"
+            android:layout_gravity="center"
+            android:background="#009688"
+            android:layout_marginTop="35dp"
+            android:orientation="horizontal">
 
+            <Button
+                android:id="@+id/COst"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/cost"
+                app:backgroundTint="@color/white" />
+
+            <Button
+                android:id="@+id/INcome"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="55dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/income"
+                app:backgroundTint="#FFFFFF" />
+
+            <Button
+                android:id="@+id/BUdget"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="50dp"
+                android:background="@drawable/budget"
+                app:backgroundTint="#FFFFFF" />
+
+            <Button
+                android:id="@+id/REport"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/report"
+                app:backgroundTint="#FFFFFF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="39dp"
+            android:layout_gravity="center"
+            android:background="#009688"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="37dp"
+                android:text="هزیــنه"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="42dp"
+                android:text="درآمــد"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="39dp"
+                android:text="بودجــه"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:text="گـزارش"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
     </LinearLayout>
 

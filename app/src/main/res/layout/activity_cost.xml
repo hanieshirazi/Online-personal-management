@@ -7,7 +7,7 @@
     tools:context=".CostActivity">
 
     <LinearLayout
-        android:id="@+id/bottom"
+        android:id="@+id/costpage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/background"
@@ -17,15 +17,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <me.ibrahimsn.lib.SmoothBottomBar
-            android:id="@+id/bottomBar"
+        <LinearLayout
+            android:id="@+id/linear2"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            app:backgroundColor="@color/teal_700"
-            app:menu="@menu/menu" />
+            android:layout_height="?attr/actionBarSize"
+            android:background="#009688"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/exit1"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/door"
+                app:backgroundTint="#FFFFFF" />
+            <Button
+                android:id="@+id/login1"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="320dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/login"
+                app:backgroundTint="#FFFFFF" />
+
+        </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/cost"
+            android:id="@+id/COst"
             android:layout_width="363dp"
             android:layout_height="354dp"
             android:layout_gravity="center"
@@ -74,8 +93,8 @@
                 android:layout_width="325dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"
                 android:hint="  توضــیحات : "
+                android:layout_marginTop="20dp"
                 app:met_baseColor="#000000"
                 app:met_iconRight="@drawable/description"
                 app:met_maxCharacters="255"
@@ -87,15 +106,109 @@
 
         <Button
             android:id="@+id/recordcost"
-            android:layout_width="199dp"
+            android:layout_width="201dp"
             android:layout_height="59dp"
             android:layout_gravity="center"
-            android:layout_marginTop="180dp"
+            android:layout_marginTop="120dp"
             android:text="ثبـت هزینـه"
             android:textColor="#FFFFFF"
             android:textSize="25dp"
             app:backgroundTint="#009688" />
+        <LinearLayout
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="#009688"
+            android:orientation="horizontal">
 
+            <Button
+                android:id="@+id/COst2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/cost"
+                app:backgroundTint="@color/white" />
+
+            <Button
+                android:id="@+id/INcome2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="55dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/income"
+                app:backgroundTint="#FFFFFF" />
+
+            <Button
+                android:id="@+id/BUdget2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="50dp"
+                android:background="@drawable/budget"
+                app:backgroundTint="#FFFFFF" />
+
+            <Button
+                android:id="@+id/REport2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/report"
+                app:backgroundTint="#FFFFFF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/text2"
+            android:layout_width="match_parent"
+            android:layout_height="39dp"
+            android:layout_gravity="center"
+            android:background="#009688"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="37dp"
+                android:text="هزیــنه"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="42dp"
+                android:text="درآمــد"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="39dp"
+                android:text="بودجــه"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:text="گـزارش"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </LinearLayout>
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
