@@ -44,18 +44,20 @@
 
 </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="383dp"
-            android:layout_height="409dp"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listNotes"
+            android:layout_width="356dp"
+            android:layout_height="413dp"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:background="@color/white" />
+            android:layout_marginTop="50dp"
+            app:spanCount="2"
+            tools:listitem="@layout/activity_cost" />
         <Button
             android:id="@+id/reportt"
             android:layout_width="201dp"
             android:layout_height="59dp"
             android:layout_gravity="center"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             android:text="گزارش پیشرفته"
             android:textColor="#FFFFFF"
             android:textSize="25dp"

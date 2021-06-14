@@ -3,6 +3,7 @@ package com.example.finalproject;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -16,37 +17,48 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class SignupActivity extends AppCompatActivity {
+
     FirebaseAuth auth;
-    EditText firstBox,lastBox,emailBox,passwordBox;
-    Button sup,lin;
+    EditText firstBox, lastBox, emailBox, passwordBox;
+    Button sup, lin;
+    ProgressDialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
-        auth=FirebaseAuth.getInstance();
-        emailBox=findViewById(R.id.emailBox);
-        passwordBox=findViewById(R.id.editTextTextPassword1);
-        firstBox=findViewById(R.id.firstBox);
-        lastBox=findViewById(R.id.lastBox);
-        lin=findViewById(R.id.login);
-        sup=findViewById(R.id.signup);
-        sup.setOnClickListener(new  View.OnClickListener(){
-            @Override
-            public void onClick(View v){
 
-                String fname,lname,pass,mail;
+        auth = FirebaseAuth.getInstance();
+        dialog = new ProgressDialog(this);
+        dialog.setMessage("Your Account is creating...");
+
+        emailBox = findViewById(R.id.emailBox);
+        passwordBox = findViewById(R.id.editTextTextPassword1);
+        firstBox = findViewById(R.id.firstBox);
+        lastBox = findViewById(R.id.lastBox);
+
+        lin = findViewById(R.id.login);
+        sup = findViewById(R.id.signup);
+
+        sup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String fname, lname, pass, mail;
                 fname = firstBox.getText().toString();
                 lname = lastBox.getText().toString();
                 mail = emailBox.getText().toString();
                 pass = passwordBox.getText().toString();
-                auth.createUserWithEmailAndPassword(mail,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>(){
+
+                dialog.show();
+                auth.createUserWithEmailAndPassword(mail, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
-                    public void onComplete (@NonNull Task<AuthResult> task){
-                        if(task.isSuccessful()){
-                            Toast.makeText(SignupActivity.this, "Account is Created!",Toast.LENGTH_SHORT).show();
-                        }else{
-                            Toast.makeText(SignupActivity.this,task.getException().getLocalizedMessage(),Toast.LENGTH_SHORT).show();
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            Toast.makeText(SignupActivity.this, "Account is Created!", Toast.LENGTH_SHORT).show();
+                            dialog.dismiss();
+                        } else {
+                            Toast.makeText(SignupActivity.this, task.getException().getLocalizedMessage(), Toast.LENGTH_SHORT).show();
                         }
                     }
                 });

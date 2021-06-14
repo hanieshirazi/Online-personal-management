@@ -14,8 +14,10 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
             android:id="@+id/linear2"
@@ -28,10 +30,11 @@
                 android:id="@+id/exit1"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
-                android:layout_marginTop="14dp"
                 android:layout_marginLeft="10dp"
+                android:layout_marginTop="14dp"
                 android:background="@drawable/door"
                 app:backgroundTint="#FFFFFF" />
+
             <Button
                 android:id="@+id/login1"
                 android:layout_width="25dp"
@@ -46,38 +49,28 @@
         <LinearLayout
             android:id="@+id/COst"
             android:layout_width="363dp"
-            android:layout_height="354dp"
+            android:layout_height="298dp"
             android:layout_gravity="center"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="60dp"
             android:background="@color/white"
             android:orientation="vertical">
 
             <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/price"
                 android:layout_width="325dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:hint="  مــبلــغ : "
                 app:met_baseColor="#000000"
-                app:met_helperText="Integer"
                 app:met_iconRight="@drawable/coin"
                 app:met_maxCharacters="255"
                 app:met_minCharacters="1"
                 app:met_primaryColor="#009688" />
 
-            <com.rengwuxian.materialedittext.MaterialEditText
-                android:layout_width="325dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:hint="  دســته بنـدی : "
-                app:met_baseColor="#000000"
-                app:met_iconRight="@drawable/partition"
-                app:met_maxCharacters="255"
-                app:met_minCharacters="1"
-                app:met_primaryColor="#009688" />
 
             <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/date"
                 android:layout_width="325dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -90,11 +83,12 @@
                 app:met_primaryColor="#009688" />
 
             <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/caption"
                 android:layout_width="325dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:hint="  توضــیحات : "
                 android:layout_marginTop="20dp"
+                android:hint="  توضــیحات : "
                 app:met_baseColor="#000000"
                 app:met_iconRight="@drawable/description"
                 app:met_maxCharacters="255"
@@ -109,11 +103,12 @@
             android:layout_width="201dp"
             android:layout_height="59dp"
             android:layout_gravity="center"
-            android:layout_marginTop="120dp"
+            android:layout_marginTop="140dp"
             android:text="ثبـت هزینـه"
             android:textColor="#FFFFFF"
             android:textSize="25dp"
             app:backgroundTint="#009688" />
+
         <LinearLayout
             android:id="@+id/button2"
             android:layout_width="match_parent"
@@ -145,8 +140,8 @@
                 android:id="@+id/BUdget2"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:layout_marginTop="20dp"
                 android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/budget"
                 app:backgroundTint="#FFFFFF" />
 
@@ -210,5 +205,5 @@
         </LinearLayout>
     </LinearLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
